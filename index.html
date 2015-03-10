@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RandomWorder</title>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="public/javascripts/PwdController.js"></script>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body ng-app="randomWorder">
+    <div ng-controller="PwdCtrl" class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="page-header">
+          <h1>RandowWorder</h1>
+        </div>
+
+        <form ng-submit="generatePassword()">
+          <div class="form-group">
+              <select ng-init="length = lengthValues[4]" 
+                      ng-model="length"
+                      ng-options="length for length in lengthValues"
+                      name="length">
+              </select>
+            <label for="length">Length</label>
+          </div>
+          <div class="form-group">
+            <input type="checkbox" name="lowercase" ng-model="lowercase" checked="checked">
+            <label for="lowercase">Lowercase</label>
+
+          </div>
+          <div class="form-group">
+            <input type="checkbox" name="uppercase" ng-model="uppercase">
+            <label for="uppercase">Uppercase</label>
+          </div>
+          <div class="form-group">
+            <input type="checkbox" name="digit" ng-model="digit">
+            <label for="digit">Digit</label>
+          </div>
+          <div class="form-group">
+            <input type="checkbox" name="digit" ng-model="symbol">
+            <label for="digit">Symbol</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Generate</button>
+        </form>
+
+        <div ng-repeat="password in passwords">
+          <span><p>{{password.value}}</p></span>
+        </div>
+
+        <hr >
+
+        <div id="footer" class="container">
+          <footer>
+            <p class="text-muted">Powered by AngularJS</p>
+          </footer>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

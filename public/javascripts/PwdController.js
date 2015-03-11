@@ -8,6 +8,7 @@ app.controller('PwdCtrl',['$scope', function($scope) {
 
     // Retrieve values in form
     var length    = $scope.length;
+    if ( !length ) { length = 8 };
     var lowercase = $scope.lowercase;
     var uppercase = $scope.uppercase;
     var digit      = $scope.digit;

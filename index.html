@@ -21,10 +21,10 @@
         <hr>
 
         <form ng-submit="generatePassword()">
-          <div style="padding-left: 40px">
+          <div style="padding-left: 15px">
 
-            <md-select ng-model="length" ng-init="length=8">
-              <md-select-label>Length</md-select-label>
+            <!--<md-select ng-model="length" ng-init="length=8">-->
+            <md-select ng-model="length" placeholder="Select Length">
                 <md-option value="4">4</md-option>
                 <md-option value="5">5</md-option>
                 <md-option value="6">6</md-option>
@@ -72,11 +72,18 @@
         </div>
       </div>
 
-      <md-bottom-sheet>
-        <div style="text-align: center">
-          Powered by AngularJS and Angular Material -- ver1.2
-        </div>
-      </md-bottom-sheet>
+      <br>
+
+      <footer>
+      <div style="border-style  : solid; 
+                  border-width  : 1px; 
+                  border-bottom : 0px; 
+                  border-right  : 0px; 
+                  border-left   : 0px; 
+                  border-color  : gray;">
+          <p>Powered by AngularJS and Angular Material -- ver1.2</p>
+      </div>
+      </footer>
     </div>
   </body>
 </html>

@@ -1,9 +1,9 @@
-var app = angular.module('randomWorder', [])
+var app = angular.module('randomWorder', ['ngMaterial'])
 
 app.controller('PwdCtrl',['$scope', function($scope) {
   $scope.passwords = [];
 
-  $scope.lengthValues = [4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+  // $scope.lengthValues = [4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
   $scope.generatePassword = function() {
 
     // Retrieve values in form
